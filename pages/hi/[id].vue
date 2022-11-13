@@ -25,6 +25,11 @@ definePageMeta({
     <template v-if="user.otherNames.length">
       <p text-sm my-4>
         <span op-50>Also as known as:</span>
+        <Button id="home-search-btn" name="home-search-btn" mt-4 color="base" rounded="'none'">
+          <template #content>
+            Search
+          </template>
+        </Button>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
             <router-link :to="`/hi/${otherName}`" replace>
